@@ -48,10 +48,16 @@ git add .
 git commit -m "Initial commit"
 ```
 
-Start the project, enabling console logging
+Create the repository on github as usual, with no readme file or gitignore.
+Then follow the instructions for
+"…or push an existing repository from the command line"
 
 ```bash
-SET DEBUG=projectname:* & npm start
+git remote add origin insertSSHhere
+git branch -M main
+git push -u origin main
 ```
 
-### Option 2 - create a git repository with the express prjoect
+### Option 2 - create a git repository with the express project template
+
+Not done this yet.
