@@ -11,7 +11,7 @@ It is assumed that the express generator has been installed globally. If not, do
 $ npm install -g express-generator
 ```
 
-## Create the express project
+## Create the express project and git repository
 
 Either:
 
@@ -60,4 +60,52 @@ git push -u origin main
 
 ### Option 2 - create a git repository with the express project template
 
-Not done this yet.
+YET TO ADD
+
+## Install nodemon to enable live updates of the server
+
+(If nodemon is installed globally, this is not necessary.)
+Nodemon ensures that on any update to the server, it is refreshed.
+Note though, a page refresh is still necessary to see any changes created by the server.
+
+```bash
+npm install --save-dev nodemon
+```
+
+## Add npm scripts for ease
+
+Note the serverstart option enables console logging
+
+```js
+  "scripts": {
+    "devstart": "nodemon ./bin/www",
+    "serverstart": "DEBUG=projectname:* npm run devstart"
+  },
+```
+
+## Bring the dependency versions up to date, and update them
+
+**package.json**
+
+```js
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.5",
+    "express": "^4.19.2",
+    "http-errors": "~2.0.0",
+    "morgan": "^1.10.0",
+    "pug": "3.0.3"
+  },
+```
+
+```bash
+npm install
+```
+
+## Install Mongoose
+
+Installing mongoose installs all its dependencies and the MongoDB database driver, but not MongoDB itself.
+
+```bash
+npm install mongoose
+```

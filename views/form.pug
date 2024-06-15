@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= "Add a new message"
+  form(action="/new", method="post")
+    p 
+    label(for="authorName") Name:
+    input(type="text", id="authorName" name="authorName" placeholder="Enter your name")
+    p 
+    label(for="messageText") Message:
+    input(type="text", id="messageText" name="messageText" placeholder="Enter a message")
+    p
+    button(type="submit") Submit
+  
+
+  
+
+
+  
